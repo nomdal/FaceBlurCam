@@ -11,10 +11,10 @@
 		53A0CE4C1FBCC15700083090 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A0CE491FBCC15700083090 /* Main.storyboard */; };
 		53A851371FE1D2B90003FE24 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A851361FE1D2B90003FE24 /* Images.xcassets */; };
 		53A8513A1FE1D3460003FE24 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53A851381FE1D3460003FE24 /* InfoPlist.strings */; };
-		6B071E9D2480C0B100F2D0B3 /* BlurFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B071E9C2480C0B100F2D0B3 /* BlurFace.swift */; };
 		AF572AFA22C6BEF600D3BF96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF572AF822C6BEF600D3BF96 /* ViewController.swift */; };
 		AF572AFB22C6BEF600D3BF96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF572AF922C6BEF600D3BF96 /* AppDelegate.swift */; };
 		AFA6DE8722C421C100414245 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AFA6DE8622C421C000414245 /* README.md */; };
+		C9B0DDE0248459B300749455 /* BlurFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0DDDF248459B300749455 /* BlurFace.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,11 +24,11 @@
 		53A0CE4A1FBCC15700083090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53A851361FE1D2B90003FE24 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		53A851391FE1D3460003FE24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6B071E9C2480C0B100F2D0B3 /* BlurFace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlurFace.swift; path = ../../../Desktop/BlurFace.swift; sourceTree = "<group>"; };
 		6FE5C0906FE5D9F000000001 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		AF572AF822C6BEF600D3BF96 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AF572AF922C6BEF600D3BF96 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFA6DE8622C421C000414245 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C9B0DDDF248459B300749455 /* BlurFace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurFace.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +42,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E1F51929D680B0D9523AA0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5320B8481AFD59C0008854DF = {
 			isa = PBXGroup;
 			children = (
@@ -49,6 +56,7 @@
 				5320B8531AFD59C0008854DF /* BlurCam */,
 				5320B8521AFD59C0008854DF /* Products */,
 				6FE5DDB06FE5DBC000000001 /* LICENSE */,
+				1E1F51929D680B0D9523AA0D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,7 +73,7 @@
 			children = (
 				AF572AF922C6BEF600D3BF96 /* AppDelegate.swift */,
 				AF572AF822C6BEF600D3BF96 /* ViewController.swift */,
-				6B071E9C2480C0B100F2D0B3 /* BlurFace.swift */,
+				C9B0DDDF248459B300749455 /* BlurFace.swift */,
 				5320B8541AFD59C0008854DF /* Supporting Files */,
 			);
 			path = BlurCam;
@@ -167,7 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B071E9D2480C0B100F2D0B3 /* BlurFace.swift in Sources */,
+				C9B0DDE0248459B300749455 /* BlurFace.swift in Sources */,
 				AF572AFB22C6BEF600D3BF96 /* AppDelegate.swift in Sources */,
 				AF572AFA22C6BEF600D3BF96 /* ViewController.swift in Sources */,
 			);
