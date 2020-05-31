@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gdu-5G-aKt">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,46 +11,99 @@
         <!--FaceBlurCam-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="APLViewController" customModule="BlurCam" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2" customClass="APLViewController" customModule="FaceBlurCam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L1G-iD-JXW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVI-yi-KeA">
-                                <rect key="frame" x="16" y="20" width="343" height="142.5"/>
+                                <rect key="frame" x="16" y="20" width="382" height="122"/>
                                 <string key="text">FaceBlurCam is a free, open-source IOS camera application that automatically blurs any human faces it detects in photos, protecting people from facial recognition software and preserving their privacy. The camera saves both the original image and the blurred version to the camera roll.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Launch BlurCam" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkF-3I-lCL">
-                                <rect key="frame" x="124" y="366.5" width="127" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0HO-KM-qbR">
-                                <rect key="frame" x="112.5" y="262" width="150" height="98"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="3yM-T1-esQ"/>
-                                    <constraint firstAttribute="width" constant="150" id="q7D-MT-ULt"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="camera" catalog="system"/>
-                                <connections>
-                                    <action selector="blurCamButtonTapped:" destination="2" eventType="touchUpInside" id="rgl-bR-LzG"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="d6p-s5-FUu">
+                                <rect key="frame" x="25" y="166" width="364" height="544"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZhB-Yb-Z7C">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="272"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0HO-KM-qbR">
+                                                <rect key="frame" x="107" y="86.5" width="150" height="98"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="3yM-T1-esQ"/>
+                                                    <constraint firstAttribute="width" constant="150" id="q7D-MT-ULt"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="camera" catalog="system"/>
+                                                <connections>
+                                                    <action selector="blurCamButtonTapped:" destination="2" eventType="touchUpInside" id="rgl-bR-LzG"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Launch BlurCam" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkF-3I-lCL">
+                                                <rect key="frame" x="12" y="194" width="340" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="Zcw-18-Zrn"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="0HO-KM-qbR" firstAttribute="centerY" secondItem="ZhB-Yb-Z7C" secondAttribute="centerY" id="FR9-SW-hng"/>
+                                            <constraint firstItem="jkF-3I-lCL" firstAttribute="leading" secondItem="ZhB-Yb-Z7C" secondAttribute="leading" constant="12" id="f9c-dY-ktu"/>
+                                            <constraint firstItem="0HO-KM-qbR" firstAttribute="centerX" secondItem="ZhB-Yb-Z7C" secondAttribute="centerX" id="fCw-Fq-vlO"/>
+                                            <constraint firstItem="jkF-3I-lCL" firstAttribute="top" secondItem="0HO-KM-qbR" secondAttribute="bottom" constant="8" id="mbn-qG-YOO"/>
+                                            <constraint firstAttribute="trailing" secondItem="jkF-3I-lCL" secondAttribute="trailing" constant="12" id="vzf-Qj-GCo"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JYs-lG-H4b">
+                                        <rect key="frame" x="0.0" y="272" width="364" height="272"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Db5-Wj-NAO">
+                                                <rect key="frame" x="107" y="86" width="150" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="sTk-kj-gdg"/>
+                                                    <constraint firstAttribute="height" constant="100" id="xK3-di-TLC"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="photo.fill.on.rectangle.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="showImagePickerForPhotoPicker:" destination="2" eventType="touchUpInside" id="cZf-N6-zow"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open Camera Roll" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2x-De-Xg9">
+                                                <rect key="frame" x="12" y="194" width="340" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="4D0-Tu-IHm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Db5-Wj-NAO" firstAttribute="centerX" secondItem="JYs-lG-H4b" secondAttribute="centerX" id="0gV-fd-6Y2"/>
+                                            <constraint firstItem="M2x-De-Xg9" firstAttribute="top" secondItem="Db5-Wj-NAO" secondAttribute="bottom" constant="8" id="Dnd-ZK-qi6"/>
+                                            <constraint firstItem="M2x-De-Xg9" firstAttribute="leading" secondItem="JYs-lG-H4b" secondAttribute="leading" constant="12" id="R2A-XB-kNf"/>
+                                            <constraint firstAttribute="trailing" secondItem="M2x-De-Xg9" secondAttribute="trailing" constant="12" id="ewk-Og-PVa"/>
+                                            <constraint firstItem="Db5-Wj-NAO" firstAttribute="centerY" secondItem="JYs-lG-H4b" secondAttribute="centerY" id="xYc-hF-Vfb"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="VVI-yi-KeA" firstAttribute="top" secondItem="9GV-Uf-KDr" secondAttribute="top" constant="20" id="2yu-Jf-y7Q"/>
+                            <constraint firstItem="d6p-s5-FUu" firstAttribute="top" secondItem="VVI-yi-KeA" secondAttribute="bottom" constant="24" id="5JF-tE-Vgb"/>
+                            <constraint firstItem="9GV-Uf-KDr" firstAttribute="bottom" secondItem="d6p-s5-FUu" secondAttribute="bottom" constant="64" id="5rd-9A-mAs"/>
                             <constraint firstItem="9GV-Uf-KDr" firstAttribute="trailing" secondItem="VVI-yi-KeA" secondAttribute="trailing" constant="16" id="BQo-j7-NhE"/>
-                            <constraint firstItem="jkF-3I-lCL" firstAttribute="top" secondItem="0HO-KM-qbR" secondAttribute="bottom" constant="5" id="L9B-KO-mOJ"/>
-                            <constraint firstItem="0HO-KM-qbR" firstAttribute="centerX" secondItem="L1G-iD-JXW" secondAttribute="centerX" id="M4y-Ds-FxS"/>
-                            <constraint firstItem="0HO-KM-qbR" firstAttribute="centerY" secondItem="L1G-iD-JXW" secondAttribute="centerY" id="P5L-HT-g5o"/>
-                            <constraint firstItem="jkF-3I-lCL" firstAttribute="leading" secondItem="9GV-Uf-KDr" secondAttribute="leading" constant="124" id="QOC-2h-Ite"/>
+                            <constraint firstItem="9GV-Uf-KDr" firstAttribute="trailing" secondItem="d6p-s5-FUu" secondAttribute="trailing" constant="25" id="EAa-9q-VJj"/>
+                            <constraint firstItem="d6p-s5-FUu" firstAttribute="leading" secondItem="9GV-Uf-KDr" secondAttribute="leading" constant="25" id="KUL-0K-v8e"/>
                             <constraint firstItem="VVI-yi-KeA" firstAttribute="leading" secondItem="9GV-Uf-KDr" secondAttribute="leading" constant="16" id="ok3-NW-pzt"/>
-                            <constraint firstItem="9GV-Uf-KDr" firstAttribute="trailing" secondItem="jkF-3I-lCL" secondAttribute="trailing" constant="124" id="rO8-SL-Kwq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9GV-Uf-KDr"/>
                     </view>
@@ -70,7 +123,7 @@
                 <navigationController id="gdu-5G-aKt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="fA8-F4-ghm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -91,5 +144,6 @@
     </scenes>
     <resources>
         <image name="camera" catalog="system" width="128" height="96"/>
+        <image name="photo.fill.on.rectangle.fill" catalog="system" width="128" height="98"/>
     </resources>
 </document>

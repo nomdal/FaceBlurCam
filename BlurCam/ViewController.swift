@@ -13,11 +13,15 @@ class APLViewController: UIViewController, UINavigationControllerDelegate, UIIma
     private var blurFace: BlurFace?
     
     @IBOutlet weak var blurCamButton: UIButton!
+    @IBOutlet weak var openCameraRollButton: UIButton!
     
     @IBAction func blurCamButtonTapped(_ sender: UIButton) {
         showImagePickerForCamera()
     }
-    
+
+    @IBAction func showImagePickerForPhotoPicker(_ sender: UIButton) {
+    showImagePicker(sourceType: UIImagePickerController.SourceType.photoLibrary)
+    }
     /// An image picker controller instance.
 	var imagePickerController = UIImagePickerController()
 	
@@ -67,11 +71,11 @@ class APLViewController: UIViewController, UINavigationControllerDelegate, UIIma
 				return
 			}
 
-            self.showImagePickerForCamera()
-
+//            self.showImagePickerForCamera()
 		})
 	}
-	
+    
+    
     func showImagePickerForCamera() {
         let authStatus = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
         
@@ -147,9 +151,7 @@ class APLViewController: UIViewController, UINavigationControllerDelegate, UIIma
         presentationController?.permittedArrowDirections = UIPopoverArrowDirection.any
 
         if sourceType == UIImagePickerController.SourceType.camera {
-
             imagePickerController.showsCameraControls = true
-
         }
         
         /*
@@ -192,7 +194,9 @@ class APLViewController: UIViewController, UINavigationControllerDelegate, UIIma
         capturedImages.append(blurredImage)
         
         UIImageWriteToSavedPhotosAlbum(blurredImage, nil, nil, nil)
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        if(picker.sourceType == .camera) {
+            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        }
         finishAndUpdate()
 
     }
