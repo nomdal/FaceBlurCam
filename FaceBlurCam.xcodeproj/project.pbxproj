@@ -11,10 +11,10 @@
 		53A0CE4C1FBCC15700083090 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A0CE491FBCC15700083090 /* Main.storyboard */; };
 		53A851371FE1D2B90003FE24 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A851361FE1D2B90003FE24 /* Images.xcassets */; };
 		53A8513A1FE1D3460003FE24 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53A851381FE1D3460003FE24 /* InfoPlist.strings */; };
-		730360BC14A69C2C65107E9C /* Pods_FaceBlurCam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B41A2C1C8962A2A1735FB1 /* Pods_FaceBlurCam.framework */; };
 		AF572AFA22C6BEF600D3BF96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF572AF822C6BEF600D3BF96 /* ViewController.swift */; };
 		AF572AFB22C6BEF600D3BF96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF572AF922C6BEF600D3BF96 /* AppDelegate.swift */; };
 		AFA6DE8722C421C100414245 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AFA6DE8622C421C000414245 /* README.md */; };
+		C9B0DDE0248459B300749455 /* BlurFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0DDDF248459B300749455 /* BlurFace.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +28,7 @@
 		AF572AF822C6BEF600D3BF96 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AF572AF922C6BEF600D3BF96 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFA6DE8622C421C000414245 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		B0B41A2C1C8962A2A1735FB1 /* Pods_FaceBlurCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceBlurCam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC3015123C5E66AEDB1CABFA /* Pods-FaceBlurCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceBlurCam.release.xcconfig"; path = "Target Support Files/Pods-FaceBlurCam/Pods-FaceBlurCam.release.xcconfig"; sourceTree = "<group>"; };
-		F1FF68EA69DB103466235182 /* Pods-FaceBlurCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceBlurCam.debug.xcconfig"; path = "Target Support Files/Pods-FaceBlurCam/Pods-FaceBlurCam.debug.xcconfig"; sourceTree = "<group>"; };
+		C9B0DDDF248459B300749455 /* BlurFace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurFace.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +36,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				730360BC14A69C2C65107E9C /* Pods_FaceBlurCam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,8 +45,6 @@
 		1E1F51929D680B0D9523AA0D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F1FF68EA69DB103466235182 /* Pods-FaceBlurCam.debug.xcconfig */,
-				CC3015123C5E66AEDB1CABFA /* Pods-FaceBlurCam.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -62,7 +57,6 @@
 				5320B8521AFD59C0008854DF /* Products */,
 				6FE5DDB06FE5DBC000000001 /* LICENSE */,
 				1E1F51929D680B0D9523AA0D /* Pods */,
-				6E369C5328135AED595B9E00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +73,7 @@
 			children = (
 				AF572AF922C6BEF600D3BF96 /* AppDelegate.swift */,
 				AF572AF822C6BEF600D3BF96 /* ViewController.swift */,
+				C9B0DDDF248459B300749455 /* BlurFace.swift */,
 				5320B8541AFD59C0008854DF /* Supporting Files */,
 			);
 			path = BlurCam;
@@ -96,14 +91,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		6E369C5328135AED595B9E00 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B0B41A2C1C8962A2A1735FB1 /* Pods_FaceBlurCam.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		6FE5DDB06FE5DBC000000001 /* LICENSE */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,7 +106,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5320B8721AFD59C0008854DF /* Build configuration list for PBXNativeTarget "FaceBlurCam" */;
 			buildPhases = (
-				59318C752B257ED34288F5AF /* [CP] Check Pods Manifest.lock */,
 				5320B84D1AFD59C0008854DF /* Sources */,
 				5320B84E1AFD59C0008854DF /* Frameworks */,
 				5320B84F1AFD59C0008854DF /* Resources */,
@@ -184,36 +170,12 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		59318C752B257ED34288F5AF /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FaceBlurCam-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		5320B84D1AFD59C0008854DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B0DDE0248459B300749455 /* BlurFace.swift in Sources */,
 				AF572AFB22C6BEF600D3BF96 /* AppDelegate.swift in Sources */,
 				AF572AFA22C6BEF600D3BF96 /* ViewController.swift in Sources */,
 			);
@@ -356,7 +318,6 @@
 		};
 		5320B8731AFD59C0008854DF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1FF68EA69DB103466235182 /* Pods-FaceBlurCam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -376,7 +337,6 @@
 		};
 		5320B8741AFD59C0008854DF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC3015123C5E66AEDB1CABFA /* Pods-FaceBlurCam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
