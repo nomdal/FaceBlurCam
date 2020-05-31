@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gdu-5G-aKt">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FaceBlurCam-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="APLViewController" customModule="BlurCam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L1G-iD-JXW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVI-yi-KeA">
+                                <rect key="frame" x="16" y="20" width="343" height="142.5"/>
+                                <string key="text">FaceBlurCam is a free, open-source IOS camera application that automatically blurs any human faces it detects in photos, protecting people from facial recognition software and preserving their privacy. The camera saves both the original image and the blurred version to the camera roll.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Launch BlurCam" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkF-3I-lCL">
+                                <rect key="frame" x="124" y="366.5" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0HO-KM-qbR">
+                                <rect key="frame" x="112.5" y="262" width="150" height="98"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="3yM-T1-esQ"/>
+                                    <constraint firstAttribute="width" constant="150" id="q7D-MT-ULt"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="camera" catalog="system"/>
+                                <connections>
+                                    <action selector="blurCamButtonTapped:" destination="2" eventType="touchUpInside" id="rgl-bR-LzG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VVI-yi-KeA" firstAttribute="top" secondItem="9GV-Uf-KDr" secondAttribute="top" constant="20" id="2yu-Jf-y7Q"/>
+                            <constraint firstItem="9GV-Uf-KDr" firstAttribute="trailing" secondItem="VVI-yi-KeA" secondAttribute="trailing" constant="16" id="BQo-j7-NhE"/>
+                            <constraint firstItem="jkF-3I-lCL" firstAttribute="top" secondItem="0HO-KM-qbR" secondAttribute="bottom" constant="5" id="L9B-KO-mOJ"/>
+                            <constraint firstItem="0HO-KM-qbR" firstAttribute="centerX" secondItem="L1G-iD-JXW" secondAttribute="centerX" id="M4y-Ds-FxS"/>
+                            <constraint firstItem="0HO-KM-qbR" firstAttribute="centerY" secondItem="L1G-iD-JXW" secondAttribute="centerY" id="P5L-HT-g5o"/>
+                            <constraint firstItem="jkF-3I-lCL" firstAttribute="leading" secondItem="9GV-Uf-KDr" secondAttribute="leading" constant="124" id="QOC-2h-Ite"/>
+                            <constraint firstItem="VVI-yi-KeA" firstAttribute="leading" secondItem="9GV-Uf-KDr" secondAttribute="leading" constant="16" id="ok3-NW-pzt"/>
+                            <constraint firstItem="9GV-Uf-KDr" firstAttribute="trailing" secondItem="jkF-3I-lCL" secondAttribute="trailing" constant="124" id="rO8-SL-Kwq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9GV-Uf-KDr"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="FaceBlurCam" id="HHq-CI-LKg"/>
+                    <connections>
+                        <outlet property="blurCamButton" destination="0HO-KM-qbR" id="dXf-QG-QYg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1029.5999999999999" y="103.89805097451276"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LAc-0J-sbd">
+            <objects>
+                <navigationController id="gdu-5G-aKt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="fA8-F4-ghm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="7BT-C3-8Ga"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BQX-Qr-Ioe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244.80000000000001" y="104.34782608695653"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" catalog="system" width="128" height="96"/>
+    </resources>
+</document>
